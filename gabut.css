@@ -1,0 +1,183 @@
+html, body {
+    margin: 0;
+    padding: 0;
+   background-color: rgb(50, 50, 172);
+   font-family: sans-serif;
+   overflow-x: hidden;
+}
+
+/* NavBar */
+nav {
+    display: flex;
+    background-color: rgb(178, 99, 253);
+    justify-content: space-around;
+    color: white;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    width: 40%;
+    justify-content: space-between;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.8em;
+}
+
+nav ul li a:hover {
+  color: rgb(78, 78, 233);
+}
+
+/* menu garis tiga */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.menu-toggle input {
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    left: -10px;
+    top: -9px;
+    opacity: 0;
+    cursor: pointer;
+
+}
+
+
+
+.menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: white;
+    border-radius: 3px;
+    transition: all 0.5s;
+
+}
+
+
+/* Menu Garis Tiga Animasi */
+.menu-toggle span:nth-child(2) {
+    transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(4) {
+    transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2) {
+    transform: rotate(45deg) translate(-1px, -1px) ; 
+}
+
+.menu-toggle input:checked ~ span:nth-child(4) {
+    transform: rotate(-45deg) translate(-1px, 0);
+}
+
+.menu-toggle input:checked ~ span:nth-child(3) {
+    scale: 0;
+}
+
+
+
+
+
+ /* Responsive Breakpoint */
+
+/* Ukuran Tablet */
+@media screen and (max-width: 768px) {
+    nav ul {
+        width: 50%;
+    }
+}
+
+/* ukuran mobile */
+@media screen and (max-width: 576px) {
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    nav ul {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        width: 80%;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        background-color:  rgb(178, 99, 253);
+        z-index: 0;
+        transform: translateX(100%);
+        transition: all 1s;
+        opacity: 0;
+    }
+}
+
+    nav ul.slide {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+.container {
+    max-height: 120px;
+    margin: 50px auto;
+    display: flex;
+    align-items: stretch;
+    align-items: center;
+    justify-content: center;
+}
+
+.container a {
+    text-decoration: none;
+    color: white;
+    border: 2px solid rgb(218, 230, 252);
+    padding: 5px;
+
+}
+
+.container a:hover {
+    background-color: rgb(17, 39, 238);
+    color:white
+}
+
+.allkotak {
+    margin: 0;
+    padding: 0;
+}
+
+.kotakan {
+    width: 500px;
+    height: 300px;
+    border: 5px solid black;
+    margin: 50px auto;
+}
+
+.kotakan2 {
+    width: 500px;
+    height: 300px;
+    border: 5px solid black;
+    margin: 50px auto;
+}
+
+.kotakan3 {
+    width: 500px;
+    height: 300px;
+    border: 5px solid black;
+    margin: 50px auto;
+}
+
+.kotakan4 {
+    width: 500px;
+    height: 300px;
+    border: 5px solid black;
+    margin: 50px auto;
+}
